@@ -1,6 +1,6 @@
 /* Universal Styles */
 
-html {
+html{
   font-size: 18px;
 }
 
@@ -37,12 +37,15 @@ input:focus {
 h1 {
   padding: .66rem 0;
   text-align: center;
-  background-color: #cca353;
+  background-color: #28a745;
   font-family: Poppins, sans-serif;
   font-size: 1.8rem;
   color: #fff;
 }
 
-h1 p {
-  font-size: 0.8rem;
+
+.search-results-heading{
+  margin-top: 20px;
+  text-align: center;
+  color: #28a745;
 }

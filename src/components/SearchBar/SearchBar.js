@@ -46,6 +46,7 @@ export class SearchBar extends React.Component {
     render() {
         return (
             <div className="SearchBar">
+                <h2 id="hero-title">Find the right business for you</h2>
                 <div className="SearchBar-sort-options">
                     <ul>
                     {this.renderSortByOptions()}
@@ -56,7 +57,7 @@ export class SearchBar extends React.Component {
                     <input onChange={this.handleLocationChange} placeholder="Where?" />
                 </div>
                 <div className="SearchBar-submit">
-                    <a onClick={this.handleSearch} href="#">Let's Go</a>
+                    <button onClick={this.handleSearch}>Let's Go</button>
                 </div>
             </div>
         );
