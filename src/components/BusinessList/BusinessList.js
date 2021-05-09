@@ -11,7 +11,7 @@ export class BusinessList extends React.Component {
                 { return <Business key={business.id} business={business}/>}) : 
                 <div>No businesses found. Try different search parameters</div>
                 :<div className="loading">
-                    <div/><div/><div/>
+                    <div></div><div></div><div></div>
                     </div>}
             </div>
 
