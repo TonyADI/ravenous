@@ -9,7 +9,11 @@ export class BusinessList extends React.Component {
                 {this.props.businesses ? 
                 this.props.businesses.map(business => 
                 { return <Business key={business.id} business={business}/>}) : 
-                <div>No businesses found. Try different search parameters</div>}
+                !this.props.loading && <div>No businesses found. 
+                    Try different search parameters</div>}
+                {this.props.loading && <div className="loading">
+                    <div/><div/><div/>
+                    </div>}
             </div>
 
         );

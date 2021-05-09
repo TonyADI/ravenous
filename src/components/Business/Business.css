@@ -64,7 +64,7 @@ a:visited {
   text-decoration: none;
 }
 
-a:hover {
+a:hover h2{
   text-decoration: underline;
 }
 

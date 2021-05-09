@@ -8,6 +8,10 @@ html{
   html {
     font-size: 15px;
   }
+
+  .App{
+    min-width: 470px;
+  }
 }
 
 input:focus {
@@ -43,9 +47,9 @@ h1 {
   color: #fff;
 }
 
-
-.search-results-heading{
-  margin-top: 20px;
+#search-results-heading{
+  margin-top: 40px;
   text-align: center;
   color: #28a745;
+  font-size: 22.5px;
 }

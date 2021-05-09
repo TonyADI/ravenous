@@ -7,14 +7,15 @@ import { Yelp } from '../../util/Yelp';
 
 
 export default class App extends React.Component{
-  constructor(props){
-    super(props);
-    this.state = {businesses:[]}
-    this.searchYelp = this.searchYelp.bind(this);
-  }
+    constructor(props){
+      super(props);
+      this.state = {businesses:[], loading: false}
+      this.searchYelp = this.searchYelp.bind(this);
+    }
     searchYelp(term, location, sortBy) {
+      this.setState({loading: true})
       Yelp.search(term, location, sortBy).then(businesses => {
-        this.setState({businesses: businesses})
+        this.setState({businesses: businesses, loading: false})
       });
     }
     render() {
@@ -22,8 +23,8 @@ export default class App extends React.Component{
         <div className="App">
           <h1>Ravenous</h1>
           <SearchBar searchYelp={this.searchYelp}/>
-          <h3 className="search-results-heading">Search Results</h3>
-          <BusinessList businesses={this.state.businesses} />
+          <h2 id="search-results-heading">Search Results</h2>
+          <BusinessList businesses={this.state.businesses} loading={this.state.loading}/>
     </div>
       );
     }
